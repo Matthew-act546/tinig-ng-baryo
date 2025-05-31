@@ -1,0 +1,43 @@
+.hero {
+  background-image: url('../assets/images/background-hero.png');
+  background-size: cover;      
+  background-position: center; 
+  background-repeat: no-repeat;
+}
+
+.navbar-transparent {
+  /* background: rgba( 255, 255, 255, 0.15 ); */
+  box-shadow: 0 8px 28px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 7px );
+  -webkit-backdrop-filter: blur( 7px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-radius: 20px;
+  margin: 5px;
+}
+
+.bg-primarys {
+  background-color: #001524;
+}
+
+.rotate-image {
+  animation: spin 8s linear infinite;
+  width: 150px;      
+  height: auto;
+  position: absolute;
+}
+
+.rotate-image.rotate-image-1 {
+  top: 200px;   
+  right: 300px; 
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
