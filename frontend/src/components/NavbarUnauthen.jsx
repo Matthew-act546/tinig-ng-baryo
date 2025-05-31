@@ -7,7 +7,7 @@ function NavbarUnauthen() {
     <>
       <Navbar expand="lg" fixed="top" className="navbar-transparent">
         <Container>
-          <Navbar.Brand href="#home" className='fw-medium text-white'>Tinig ng baryo</Navbar.Brand>
+          <Navbar.Brand href="#home" className='fw-medium text-white'>Tinig baryo</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto gap-2 ">
