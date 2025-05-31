@@ -1,0 +1,22 @@
+/* ROTATE IMAGE FOR UNAUTHENTICATE ABOUT */
+.rotate-image {
+  animation: spin 8s linear infinite;
+  width: 150px;      
+  height: auto;
+  position: absolute;
+}
+
+.rotate-image.rotate-image-1 {
+  top: 200px;   
+  right: 300px; 
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
