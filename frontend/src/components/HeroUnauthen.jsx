@@ -12,7 +12,7 @@ function HeroUnauthen() {
       <Container fluid="md">
         <Row>
           <Col>
-              <div className='text-white' style={{ paddingTop: '200px', minHeight: '100vh'}}>
+              <div className='text-white' style={{ paddingTop: '250px', minHeight: '100vh'}}>
                 <h1 className='display-3 fw-medium'>Tinig ng baryo</h1>
                 <p className='fs-4'>
                   Ang Tinig ng Baryo ay ang inyong bagong online bulletin board, ang modernong bersyon ng ating |
