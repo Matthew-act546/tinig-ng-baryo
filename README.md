@@ -1,1 +1,1 @@
-# Tinig Ng Baryo
+Tinig ng Baryo
