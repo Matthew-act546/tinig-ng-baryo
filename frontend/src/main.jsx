@@ -6,6 +6,7 @@ import './styles/main.scss';
 import LoginSignup from './pages/LoginSignup.jsx';
 import Login from './pages/Login.jsx';
 import PageNotFound from './pages/PageNotFound.jsx';
+import Signup from './pages/Singup.jsx';
 
 const router = createBrowserRouter([
   {
@@ -23,7 +24,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/SignUp',
-    element: <LoginSignup />,
+    element: <Signup />,
   },
   // {
   //   path: '/ProfilePage/:ProfileId',

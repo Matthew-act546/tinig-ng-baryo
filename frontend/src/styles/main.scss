@@ -3,5 +3,7 @@
 @use './unauthen/uNavbar';
 @use './unauthen/uHome';
 @use './unauthen/uAbout';
+@use './authenticating/loginSignup';
+@use './authenticating/signup';
 
 @import 'bootstrap/scss/bootstrap';  // import bootstrap after variables and modules

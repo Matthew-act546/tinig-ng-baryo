@@ -1,0 +1,15 @@
+@use '../custom' as *;
+
+
+
+.circle {
+  border-radius: 50%;
+  background-color: $primary;
+  height: 350px;
+  width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+

@@ -1,7 +1,47 @@
 $primary: #001524;
 $secondary: #21de79;
+$orange: #ff6a18;
 
+// For authenticating
+.loginSignup {
+  background-color: $secondary;
+  min-height: 100vh;
+}
 
+.btn-authenticating {
+  width: 250px;
+  height: 50px;
+  padding: 20px;
+  color: black;
+  outline: none;
+  border: none;
+  border-radius: 32%;
+  cursor: pointer;
+  border-radius: 25px;
+  padding: 15px 30px;
+}
+
+.btn-authenticating-login {
+  background-color: $orange;
+}
+
+.btn-authenticating-signup {
+  background-color: $secondary;
+}
+.btn-authenticating-signup-continue {
+  background-color: #fff;
+}
+
+.box-circle {
+  border-radius: 50px;
+  background-color: $primary;
+  height: 550px;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 
 // CUSTOM card styles for unauthenticate about
 .card-unauthenticate {

@@ -1,0 +1,15 @@
+@use '../custom' as *;         
+
+.inputs  {
+  padding: 11px;
+  background-color: $primary;
+  border: 1px solid white;
+  border-radius: 25px;
+  color: white;
+  width: 360px;
+}
+
+.inputs::placeholder {
+  color: white;
+  opacity: 1; // ensures it's not faded
+}

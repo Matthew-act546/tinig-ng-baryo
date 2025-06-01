@@ -3,6 +3,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import hero from '../assets/images/background-hero.png';
+import { Link } from 'react-router-dom';
 
 function HeroUnauthen() {
   return (
@@ -24,7 +25,9 @@ function HeroUnauthen() {
                   lumang "village board." Ito ay nilikha upang pag-isahin ang ating komunidad at gawing mas madali ang
                   pagbabahagi ng impormasyon, pag-uulat ng mga isyu, at pagtutulungan sa ating baryo.
                 </p>
-                <Button variant='secondary' className='fw-bold'>Log in / Sign Up</Button>
+                <Button as={Link} to="/LoginSignUp" variant="secondary" className="fw-bold">
+                  Log in / Sign Up
+                </Button>
               </div>
           </Col>
         </Row>
