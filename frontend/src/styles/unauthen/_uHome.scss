@@ -1,0 +1,20 @@
+@use '../custom' as *;
+
+// .hero {
+//   background-image: url('@/assets/images/background-hero.png');
+//   background-size: cover;      
+//   background-position: center; 
+//   background-repeat: no-repeat;
+// }
+
+
+.btn-lightGreen {
+  color: #fff;
+  background-color: #21de79;
+  border-color: #21de79;
+
+  &:hover {
+    background-color: darken(#21de79, 10%);
+    border-color: darken(#21de79, 10%);
+  }
+}

@@ -7,14 +7,14 @@ function NavbarUnauthen() {
     <>
       <Navbar expand="lg" fixed="top" className="navbar-transparent">
         <Container>
-          <Navbar.Brand href="#home" className='fw-medium text-white'>Tinig baryo</Navbar.Brand>
+          <Navbar.Brand href="#home" className='fw-medium text-white'>Tinig ng Baryo</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto gap-2 ">
               <Nav.Link className='text-white' href="#home">Home</Nav.Link>
-              <Nav.Link className='text-white' href="#link">About us</Nav.Link>
-              <Nav.Link className='text-white' href="#links">How to use?</Nav.Link>
-              <Nav.Link className='text-white' href="#linkss">Contact us</Nav.Link>
+              <Nav.Link className='text-white' href="#about">About us</Nav.Link>
+              <Nav.Link className='text-white' href="#howtouse">How to use?</Nav.Link>
+              <Nav.Link className='text-white' href="#contact">Contact us</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

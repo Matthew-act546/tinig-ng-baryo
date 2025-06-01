@@ -1,5 +1,7 @@
 import About from "./components/About"
+import Footer from "./components/Footer"
 import HeroUnauthen from "./components/HeroUnauthen"
+import HowToUse from "./components/HowToUse"
 import NavbarUnauthen from "./components/NavbarUnauthen"
 
 function App() {
@@ -8,6 +10,8 @@ function App() {
       <NavbarUnauthen />
       <HeroUnauthen />
       <About />
+      <HowToUse />
+      <Footer />
     </>
   )
 }

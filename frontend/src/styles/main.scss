@@ -1,6 +1,7 @@
+// Import your variables first
+@use 'custom' as *;              // variables first
+@use './unauthen/uNavbar';
+@use './unauthen/uHome';
+@use './unauthen/uAbout';
 
-@import url('./unauthen/uNavbar.css');
-@import url('./unauthen/uHome.css');
-@import url('./unauthen/uAbout.css');
-
-@import url('./custom.css');
+@import 'bootstrap/scss/bootstrap';  // import bootstrap after variables and modules

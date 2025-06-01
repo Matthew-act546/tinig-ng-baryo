@@ -1,0 +1,48 @@
+$primary: #001524;
+$secondary: #21de79;
+
+
+
+// CUSTOM card styles for unauthenticate about
+.card-unauthenticate {
+  background-color: $secondary;
+  color: black;
+  border-radius: 30px;
+  padding: 10px;
+  max-width: 670px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: $primary;
+  border-radius: 40px;
+  height: 220px;
+  width: 320px;
+}
+
+
+/* ROTATE IMAGE FOR UNAUTHENTICATE ABOUT */
+.rotate-image {
+  animation: spin 30s linear infinite;
+  width: 150px;      
+  height: auto;
+}
+
+.rotate-image.rotate-image-1 {
+  position: absolute;
+  top: -5px;   
+  right: 1px; 
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
