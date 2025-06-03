@@ -157,7 +157,7 @@ function BaryoJoined() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            {baryoName}
+            {baryo.name}
           </Typography>
           <Dropdown className='ms-auto'>
             <Dropdown.Toggle variant="success" id="dropdown-basic">
