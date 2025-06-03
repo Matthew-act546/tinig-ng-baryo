@@ -1,3 +1,5 @@
+import Dropdown from 'react-bootstrap/Dropdown';
+
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -15,9 +17,10 @@ import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Dropdown from 'react-bootstrap/Dropdown';
-import {  db, auth  } from "../../../config/firebase";
-import { getDoc, doc , updateDoc } from "firebase/firestore";
+import PropTypes from 'prop-types';
+import Autocomplete from '@mui/material/Autocomplete';
+import TextField from '@mui/material/TextField';
+
 
 const drawerWidth = 240;
 
@@ -30,65 +33,13 @@ const tags = [
   'Emergency Alert',
   'Health Advisory',
 ];
-
-function BaryoJoined() {
- 
-  const [baryoName, setBaryoName] = React.useState('');
-  const [userId, setUserId] = React.useState('');
-
-  React.useEffect(() => {
-    const fetchBaryoData = async () => {
-      const user = auth.currentUser;
-      if (!user) return;
-
-      setUserId(user.uid);
-
-      const userRef = doc(db, "users", user.uid);
-      const userSnap = await getDoc(userRef);
-
-      if (userSnap.exists()) {
-        const baryoId = userSnap.data().baryoId;
-        if (baryoId) {
-          const baryoRef = doc(db, "baryos", baryoId);
-          const baryoSnap = await getDoc(baryoRef);
-          if (baryoSnap.exists()) {
-            setBaryoName(baryoSnap.data().name || 'Unknown Baryo');
-          }
-        }
-      }
-    };
-
-    fetchBaryoData();
-  }, []);
-
-  const handleLeaveBaryo = async () => {
-    if (!userId) return;
-    try {
-      await updateDoc(doc(db, "users", userId), {
-        baryoId: null,
-      });
-      alert("You have left the baryo.");
-      window.location.href = "/";
-    } catch (err) {
-      console.error("Error leaving baryo:", err);
-    }
-  };
-
-  async function handleLogout() {
-    try {
-      await auth.signOut();
-      window.location.href = "/";
-      console.log("User logged out successfully!");
-    } catch (error) {
-      console.error("Error logging out:", error.message);
-    }
-  }
+function BaryoJoined({ window }) {
   const dummyPosts = [
-    { id: 1, title: 'Water Interruption on Monday', tag: 'Announcement' },
-    { id: 2, title: 'Wallet Found at Barangay Hall', tag: 'Lost and Found' },
-    { id: 3, title: 'Cellphone Theft Reported', tag: 'Theft' },
-    { id: 4, title: 'Barangay Cleanup Drive', tag: 'Event' },
-  ];
+  { id: 1, title: 'Water Interruption on Monday', tag: 'Announcement' },
+  { id: 2, title: 'Wallet Found at Barangay Hall', tag: 'Lost and Found' },
+  { id: 3, title: 'Cellphone Theft Reported', tag: 'Theft' },
+  { id: 4, title: 'Barangay Cleanup Drive', tag: 'Event' },
+];
 
   const [selectedTag, setSelectedTag] = React.useState(null);
 
@@ -119,7 +70,7 @@ function BaryoJoined() {
       <Toolbar />
       <Divider />
       <List>
-        {['Home', 'Anonymous report', 'Contact Us'].map((text, index) => (
+        {['Home', 'Announcement', 'Anonymous report'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
@@ -131,14 +82,16 @@ function BaryoJoined() {
         ))}
       </List>
       <Divider />
+      
     </div>
   );
 
-  const container = typeof window !== 'undefined' ? () => window.document.body : undefined;
+  const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
+      sdsa
       <AppBar
         position="fixed"
         sx={{
@@ -157,19 +110,19 @@ function BaryoJoined() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            {baryo.name}
+            baryo.name
           </Typography>
-          <Dropdown className='ms-auto'>
+           <Dropdown className='ms-auto'>
             <Dropdown.Toggle variant="success" id="dropdown-basic">
               Your Account
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-              <Dropdown.Item href="#/action-1"></Dropdown.Item>
-              <Dropdown.Item onClick={handleLogout}>Logout</Dropdown.Item>
-              <Dropdown.Item onClick={handleLeaveBaryo} className='text-danger'>
-                Leave Baryo
-              </Dropdown.Item>
+              <Dropdown.Item href="/AuthenticatedLogged">back to home</Dropdown.Item>
+              <Dropdown.Item >Logout</Dropdown.Item>
+              <Dropdown.Item  className='text-danger'>
+              Leave Baryo
+            </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
         </Toolbar>
@@ -213,7 +166,7 @@ function BaryoJoined() {
         sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
       >
         <Toolbar />
-        <div>
+        <div >
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             {tags.map((tag) => (
               <button
@@ -228,23 +181,30 @@ function BaryoJoined() {
                   cursor: 'pointer',
                 }}
               >
-                {tag}
-              </button>
-            ))}
-          </div>
+            {tag}
+          </button>
+        ))}
+      </div>
 
-          <h4 style={{ marginTop: '30px' }}>
-            {selectedTag ? `Posts under "${selectedTag}"` : 'All Posts'}
-          </h4>
-          <ul>
-            {filteredPosts.map((post) => (
-              <li key={post.id}>{post.title}</li>
-            ))}
-          </ul>
-        </div>
+      <h4 style={{ marginTop: '30px' }}>
+        {selectedTag ? `Posts under "${selectedTag}"` : 'All Posts'}
+      </h4>
+      <ul>
+        {filteredPosts.map((post) => (
+          <li key={post.id}>{post.title}</li>
+        ))}
+      </ul>
+    </div>
+      
       </Box>
     </Box>
   );
 }
+
+
+BaryoJoined.propTypes = {
+  window: PropTypes.func,
+};
+
 
 export default BaryoJoined;

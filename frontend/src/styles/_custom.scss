@@ -32,10 +32,22 @@ $orange: #ff6a18;
   background-color: #fff;
 }
 
-.box-circle {
+.box-circles {
   border-radius: 50px;
   background-color: $primary;
+  height: 350px;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.box-circle {
+  border-radius: 20px;
+  background-color: $primary;
   height: 550px;
+  padding: 15px;
   width: 400px;
   display: flex;
   align-items: center;

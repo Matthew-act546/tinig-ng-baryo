@@ -25,7 +25,7 @@ function HowToUse() {
                 </Col>
                 <Col lg={10}>
                 <h1 className='text-white'>First</h1>
-                <p className='text-secondary'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus aspernatur ex nesciunt, dignissimos veniam quia reiciendis, deserunt ea necessitatibus sunt quidem aliquam saepe! Est blanditiis natus, eum nesciunt maxime sint!</p>
+                <p className='text-secondary'>Getting started on Tinig ng Baryo is quick and easy. Simply visit the website and click on the “Sign Up” button. You’ll be asked to provide a valid email address and create a secure password. Once registered, you’re ready to take the next step toward becoming part of your community’s voice.</p>
                 </Col>
               </Row>
               
@@ -37,7 +37,7 @@ function HowToUse() {
                 </Col>
                 <Col lg={10}>
                 <h1 className='text-white'>Second</h1>
-                <p className='text-secondary'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus aspernatur ex nesciunt, dignissimos veniam quia reiciendis, deserunt ea necessitatibus sunt quidem aliquam saepe! Est blanditiis natus, eum nesciunt maxime sint!</p>
+                <p className='text-secondary'>To ensure authenticity while maintaining privacy, users must complete a simple identity verification process. This includes submitting a valid form of identification (such as a barangay ID or driver’s license) which will only be used to confirm residency and will not be published on the site.</p>
                 </Col>
               </Row>
             </Col>
@@ -48,7 +48,7 @@ function HowToUse() {
                 </Col>
                 <Col lg={10}>
                 <h1 className='text-white'>Third</h1>
-                <p className='text-secondary'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus aspernatur ex nesciunt, dignissimos veniam quia reiciendis, deserunt ea necessitatibus sunt quidem aliquam saepe! Est blanditiis natus, eum nesciunt maxime sint!</p>
+                <p className='text-secondary'>After verification, you can set up your profile. Choose a username that represents you and update your basic information if you wish. While most of your data remains private, your profile helps build trust within the community whenever you engage with others.</p>
                 </Col>
               </Row>
             </Col>
@@ -59,7 +59,7 @@ function HowToUse() {
                 </Col>
                 <Col lg={10}>
                   <h1 className='text-white'>Fourth</h1>
-                  <p className='text-secondary'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus aspernatur ex nesciunt, dignissimos veniam quia reiciendis, deserunt ea necessitatibus sunt quidem aliquam saepe! Est blanditiis natus, eum nesciunt maxime sint!</p>
+                  <p className='text-secondary'>Once your profile is set up, you're all set to start sharing! Whether it's reporting an issue, responding to announcements, or posting a lost or found item, you can now contribute to building a better, more connected community—all while staying anonymous if you choose.</p>
                 </Col>
               </Row>
             </Col>

@@ -48,17 +48,8 @@ function Signup() {
           <div className="box-circle bg-primary text-center">
             <h6 className="text-white fw-medium pb-2">Maligayang araw po mula sa Tinig ng Baryo!</h6>
             
-            {/* <Link to="/Login" className="btn-authenticating btn-authenticating-signup-continue mb-1 fw-medium text-decoration-none">
-              Continue to Google
-            </Link>
-            <Link to="/Login" className="btn-authenticating btn-authenticating-signup-continue mb-1 fw-medium text-decoration-none">
-              Continue to Facebook
-            </Link> */}
-            
             <div className='border my-3' style={{ width: '80%', height: '1px' }}></div>
-            <div className="d-flex align-items-center text-muted mb-3 text-white">
-              <span className="small fw-medium text-white">or continue with</span>
-            </div>
+         
             <div className="text-center mb-3">
               <div className='text-start w-100'>
 
@@ -81,16 +72,13 @@ function Signup() {
                 <br />
                 <input type="password" className='inputs text-whites' id='password'  onChange={(e) => setPassword(e.target.value)} placeholder='Password' />
               </div>
-              <button type="submit" className="btn btn-primary">
+              <button type="submit" className="btn btn-secondary mt-4">
                 Sign Up
               </button>
             </div>
 
-            {/* <Link to="/Login" className="btn-authenticating btn-authenticating-signup mb-1 fw-medium text-decoration-none">
-              Sign up
-            </Link> */}
 
-            <p className='text-white fw-medium'>Already have account? <a href="" className='text-secondary fw-medium'>Log in here</a></p>
+            <p className='text-white fw-medium'>Already have account? <Link to='/Login' className='text-white'>Log in here</Link></p>
           </div>
         </div>
       </div>
