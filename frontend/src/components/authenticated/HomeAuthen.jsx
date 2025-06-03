@@ -5,13 +5,14 @@ import { db, auth } from "../../../config/firebase";
 import React, { useState, useEffect } from "react";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import { collection, getDoc, getDocs, doc, updateDoc, arrayUnion } from "firebase/firestore";
+import { collection,  getDocs, doc, updateDoc, arrayUnion } from "firebase/firestore";
 import { useNavigate } from 'react-router-dom';
 
 function HomeAuthen() {
   const [query, setQuery] = useState("");
   const [baryos, setBaryos] = useState([]);
   const navigate = useNavigate();
+
 
   useEffect(() => {
     const fetchBaryos = async () => {
@@ -58,25 +59,7 @@ function HomeAuthen() {
     }
   };
 
-  useEffect(() => {
-    const checkJoinedBaryo = async () => {
-      const user = auth.currentUser;
-      if (!user) return;
-
-      try {
-        const userDoc = await getDoc(doc(db, "users", user.uid));
-        const userData = userDoc.data();
-
-        if (userData?.joinedBaryo) {
-          navigate(`/baryo/${userData.joinedBaryo}`);
-        }
-      } catch (err) {
-        console.error("Error checking joined baryo:", err);
-      }
-    };
-
-    checkJoinedBaryo();
-  }, [navigate]);
+  
 
   const currentUserId = auth.currentUser?.uid || "";
 
@@ -128,7 +111,7 @@ function HomeAuthen() {
                           variant={baryo.members?.includes(currentUserId) ? "success" : "primary"}
                           onClick={() =>
                             baryo.members?.includes(currentUserId)
-                              ? navigate(`/baryos/${baryo.id}`)   
+                              ? navigate(`/baryo/${baryo.id}`)  // corrected path here
                               : handleJoin(baryo.id)
                           }
                         >

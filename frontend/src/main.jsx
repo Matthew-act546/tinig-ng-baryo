@@ -53,7 +53,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: '/baryos/:id',
+    path: '/baryo/:id',
     element: (
       <ProtectedRoute>
         <BaryoJoined />
