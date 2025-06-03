@@ -3,8 +3,10 @@ import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
+// AKO AY PAGOD NA HUHUHUNESS
+
 const firebaseConfig = {
-  apiKey: "AIzaSyDX17DWM5cPf9pV4t9tF4Hl_EpjfUglNCA",
+  apiKey: "AIzaSyDX17DWM5cPf9pV4t9tF4Hl_EpjfUglNCA", 
   authDomain: "tinig-ng-baryo.firebaseapp.com",
   projectId: "tinig-ng-baryo",
   storageBucket: "tinig-ng-baryo.firebasestorage.app",
